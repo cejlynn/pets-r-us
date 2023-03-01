@@ -16,6 +16,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const mongoose = require('mongoose');
+const fs = require('fs');
 
 const Customers = require('./models/customers');
 const Appointment = require('.models/appointments.js')
