@@ -1,0 +1,39 @@
+<header><%- include('./partials/_header.ejs') %>
+
+    <%- include('./partials/_navbar.ejs') %></header>
+    
+    <div class="card">
+        <div class="card-content">
+          <div class="card-title"> Book an Appointment </div>
+          <hr></hr>
+          <div class="form-field">
+            <label for="email">Email:</label><br />
+            <input type="text" class="input full-width" name="email" id="email" required>
+            </div>
+
+            <div class="form-field">
+                <input type="submit" value="Search" id="search" class="btn btn-primary full-width">
+            </div>
+            </div>
+
+            <div class="center-div" id="appointments">
+            </div>
+            </div>
+            
+            <script>
+                document.getElementById('search').onclick = function() {
+                  const email = document.getElementById('email').value;
+                  fetch('/api/appointments/' + firstName)
+                          .then(res => res.json())
+                          .then(data => {
+                            let tableString = `<br /><h4 style="font-size: 32px; text-align: center; padding-bottom: 10px; font-weight: lighter">My Appoiintments</h4><table id="orders" style="width: 100%;" class="table full-width"><tr><th>First name</th><th>Last name</th></tr>`;
+                            for (let appointment of data) {
+                              tableString += `<tr><td>${appointment.firstName}</td><td>${appointment.lastName}</td><td>${appointment.email}</td></tr>`;
+                            }
+                            tableString += `</table>`;
+                            document.getElementById('appointments').innerHTML = tableString;
+                          });
+                }
+              </script>
+              
+             <footer> <%- include('./partials/_footer.ejs') %></footer>
