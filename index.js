@@ -19,7 +19,7 @@ const mongoose = require('mongoose');
 const fs = require('fs');
 
 const Customers = require('./models/customers');
-const Appointments = require('.models/appointments.js')
+const Appointment = require('./models/appointments.js')
 
 const CONN = 'mongodb+srv://web340_admin:Alaska99731@bellevueuniversity.x3pcqyt.mongodb.net/web340DB?retryWrites=true&w=majority';
 
