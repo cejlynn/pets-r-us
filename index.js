@@ -19,7 +19,7 @@ const mongoose = require('mongoose');
 const fs = require('fs');
 
 const Customers = require('./models/customers');
-const Appointment = require('.models/appointments.js')
+const Appointments = require('.models/appointments.js')
 
 const CONN = 'mongodb+srv://web340_admin:Alaska99731@bellevueuniversity.x3pcqyt.mongodb.net/web340DB?retryWrites=true&w=majority';
 
@@ -90,14 +90,14 @@ app.get('/customer-list', (req, res) => {
 });;
 
 app.get('/appointments', (req, res) => {
-    res.render('appointment', {
+    res.render('appointments', {
         title: 'Pets-R-Us: Book an Appointment',
         message: 'Book an appointment',
     });;
 });
 
 app.get('/my-appointments', (req, res) => {
-    res.render('appointment', {
+    res.render('my-appointments', {
         title: 'Pets-R-Us: My Appointments',
         message: 'Pets-R-Us My Appointments',
     });;
