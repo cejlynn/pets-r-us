@@ -34,6 +34,9 @@ app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 app.use("/site", express.static(path.join(__dirname, "public/stylesheets")));
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 const PORT = process.env.PORT || 4000;
 
 // connection to MONGODB
