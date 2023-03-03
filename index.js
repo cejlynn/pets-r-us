@@ -50,7 +50,7 @@ mongoose.connect(CONN).then(() => {
 
 // web pages
 
-app.get('/index', (req, res) => {
+app.get('/', (req, res) => {
     res.render('index', {
         title: 'Pets-R-Us: Landing Page',
         message: 'Welcome to our page!',
