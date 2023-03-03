@@ -39,13 +39,13 @@ p { font-family: 'Oswald', 'Lato', Verdana, Arial, sans-serif;
 }
 
 .btn-primary {
-  background-color: #4F3674;
+  background-color: #637d49;
   color: #fff;
 }
 
 .btn-primary:hover {
-  background-color: #D6A800;
-  color: #4F3674;
+  background-color: #4C5B3D;
+  color: #fff;
 }
 
 .full-width {
@@ -214,7 +214,7 @@ padding: 10px;
 }
 
 .footer {
-position: fixed;
+position: relative;
 left: 0;
 bottom: 0;
 width: 100%;
