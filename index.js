@@ -85,8 +85,8 @@ app.get('/register', (req, res) => {
     });
 });;
 
-app.get('/customer-list', (req, res) => {
-    res.render('customer-list', {
+app.get('/customerlist', (req, res) => {
+    res.render('customerlist', {
         title: 'Pets-R-Us: Customer List',
         message: 'Welcome to our customer list!',
     });
