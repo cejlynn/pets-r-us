@@ -151,7 +151,7 @@ app.get('/customers', (req, res) => {
             console.log(err);
             next(err);
         } else {
-            res.render('customer-list', {
+            res.render('customerlist', {
                 title: 'Pets-R-Us: Customer List',
                 message: 'Welcome to our customer list!',
                 customer: customer,
